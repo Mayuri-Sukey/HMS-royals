@@ -1,0 +1,87 @@
+*{
+    Margin: 0;
+    Padding: 0;
+    Box-sizing: border-box;
+  }
+  
+  /* Basic styling */
+  Body {
+    Font-family: Arial, sans-serif;
+    Background-color: #000;
+    Color: #fff;
+  }
+  
+  Header {
+    Background-color: #111;
+    Padding: 20px 0;
+  }
+  
+  Nav {
+    Display: flex;
+    Justify-content: space-between;
+    Align-items: center;
+    Max-width: 1000px;
+    Margin: 0 auto;
+    Padding: 0 20px;
+  }
+  
+  .logo img {
+    Width: 100px;
+  }
+  
+  .nav-links {
+    List-style: none;
+    Display: flex;
+  }
+  
+  .nav-links li {
+    Margin-right: 20px;
+  }
+  
+  .nav-links a {
+    Text-decoration: none;
+    Color: #fff;
+  }
+  
+  .hero {
+    Background: url(‘netflix-hero.png’) no-repeat center;
+    Background-size: cover;
+    Height: 80vh;
+    Display: flex;
+    Flex-direction: column;
+    Justify-content: center;
+    Text-align: center;
+  }
+  
+  .hero-content {
+    Max-width: 800px;
+    Margin: 0 auto;
+  }
+  
+  .hero h1 {
+    Font-size: 3rem;
+    Margin-bottom: 20px;
+  }
+  
+  .cta-button {
+    Background-color: #e50914;
+    Color: #fff;
+    Padding: 10px 20px;
+    Border: none;
+    Border-radius: 4px;
+    Font-size: 1.2rem;
+    Cursor: pointer;
+  }
+  
+  .featured {
+    Max-width: 1000px;
+    Margin: 0 auto;
+    Padding: 20px;
+  }
+  
+  Footer {
+    Background-color: #111;
+    Text-align: center;
+    Padding: 10px 0;
+  }
+  

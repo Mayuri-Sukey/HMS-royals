@@ -1,0 +1,486 @@
+: <!DOCTYPE html>
+<html>
+<head>
+    <title>Temperature Converter</title>
+    <style>
+        .trending-dishes {
+  display: flex;
+  overflow-x: auto; /* Enable horizontal scrolling */
+  gap: 20px; /* Spacing between dishes */
+  padding: 10px 0;
+}
+
+.dish {
+  display: inline-flex;
+  flex-direction: column;
+  max-width: 250px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+    </style>
+</head>
+<body>
+    <div class=”container”>
+        <h1>Temperature Converter</h1>
+        <input type="number" id="celsiusInput" placeholder= "Enter temperature in Celsius" >
+        <button onclick=convertTemperature()>Convert</button>
+        <p id=”result”></p>
+    </div>
+
+    <script>
+        Function convertTemperature() {
+            Const celsius = parseFloat(document.getElementById(“celsiusInput”).value);
+            If (!isNaN(celsius)) {
+                Const fahrenheit = (celsius * 9/5) + 32;
+                Document.getElementById("result").innerHTML = `${celsius}°C is equal to ${fahrenheit}°F`;
+            } else {
+                Document.getElementById("result").innerHTML = "Please enter a valid temperature in Celsius.";
+            }
+        }
+    </script>
+</body>
+</html>
+
+
+
+<label>
+    <input type="checkbox" checked="checked" name="remember"> Remember me
+  </label>
+</div>
+
+<div class="container" style="background-color:#f1f1f1">
+  <button type="button" class="cancelbtn">Cancel</button>
+  <span class="psw">Forgot <a href="#">password?</a></span>
+</div>
+
+
+
+
+
+<div class="dropdown">
+    <button class="dropbtn">Resources
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+      <a href="#">Blogs</a>
+      <a href="#">Youtube</a>
+      <a href="#">Webinar</a>
+      <a href="#">About us</a>
+      <a href="#">Carrers </a>
+      <a href="#">Support </a>
+    </div>
+*/
+--->
+
+
+
+
+<!--<script>
+    document.addEventListener("DOMContentLoaded", function() {
+      const loginButton = document.getElementById('loginButton');
+
+      loginButton.addEventListener('click', function(event) {
+        event.preventDefault(); // Prevents the form from submitting
+
+        // Get input field values
+        const username = document.getElementById('username').value;
+        const password = document.getElementById('password').value;
+
+        // Simple validation: Check if fields are empty
+        if (username.trim() === '' || password.trim() === '') {
+          alert('Please enter both username and password.');
+          return; // Prevent further execution
+        }
+
+        // Here you can add further validation logic, such as checking against a database or hardcoded credentials
+
+        // For example, hardcoded validation (not secure for production, just for demonstration)
+        const hardcodedUsername = 'admin';
+        const hardcodedPassword = '123';
+
+        if (username === hardcodedUsername && password === hardcodedPassword) {
+          alert('Login successful! Redirecting...');
+          window.location.href = 'table.html';
+          // Perform redirection or any other action on successful login
+        } else {
+          alert('Invalid credentials. Please try again.');
+        }
+      });
+    });
+  //</script>--.
+
+
+<!--<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login</title>
+  <link rel="stylesheet" href="dumycss.css">
+  <script defer src="new.js"></script>
+</head>
+
+<body>
+  <main id="main-holder">
+    <h1 id="login-header">Login</h1>
+    
+    <div id="login-error-msg-holder">
+      <p id="login-error-msg">Invalid username <span id="error-msg-second-line">and/or password</span></p>
+    </div>
+    
+    <form id="login-form">
+      <input type="text" name="username" id="username-field" class="login-form-field" placeholder="Username">
+      <input type="password" name="password" id="password-field" class="login-form-field" placeholder="Password">
+      <input type="submit" value="Login" id="login-form-submit">
+    </form>
+  
+  </main>
+</body>
+
+</html>-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Document</title>
+  <style>
+    header,
+nav,
+button {
+  margin: 0;
+  padding: 0;
+  border: none;
+  background: none;
+  font-size: 16px;
+}
+
+/* Styling the header */
+header {
+  background-color: #333;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #fff;
+}
+
+/* Styling the logo */
+.logo img {
+  max-width: 100px; /* Adjust the size of the logo as needed */
+  height: auto;
+}
+
+/* Styling the navigation buttons */
+nav button {
+  margin-left: 20px;
+  color: #fff;
+  cursor: pointer;
+}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <img src="logo.png" alt="Company Logo">
+    </div>
+    <nav>
+      <button>Button 1</button>
+      <button>Button 2</button>
+      <button>Button 3</button>
+      <!-- Add more buttons as needed -->
+    </nav>
+  </header>
+  
+     
+  
+</body>
+</html>
+
+
+2px 15px 0 15px
+
+<html>
+  <head>
+
+    <style>
+      .header-inner{display: flex;
+     align-items: center;
+     justify-content: space-between;
+      max-width: 1344px;
+     margin: 0 auto;
+     position: relative;
+      }
+    </style>
+  </head>
+</html>
+
+<div class="header-inner">
+  <div class="left-side" id="site-logo">
+      <a href="/" class="logo">
+      <img src="https://www.freshrelevance.com/wp-content/uploads/2023/09/Freshrelevance-full-colour-rbg.svg" width="200px" height="31.97px" alt="Fresh Relevance">
+      </a>
+  </div>
+  <nav class="middle top-nav">
+       <ul id="menu-main-menu">
+<li>
+<a target="" href="/solutions-summary/">Solutions</a>
+<div class="submenu">
+<div class="overflow ">
+<div class="col">
+            <div class="submenu-area" style="background:">
+                  <a class="submenu-area-title pre-title">Capabilities</a>
+                  <ul>
+                    <li class="freshPI-Capabilities-Triggered-Emails tangerine-v2"><a href="/triggered-emails/" target="">Triggered emails</a></li>
+                    <li class="freshPI-Capabilities-Product-Recommendations tangerine-v2"><a href="/product-recommendations/" target="">Product recommendations</a></li>
+                    <li class="freshPI-Capabilities-Popovers tangerine-v2"><a href="/onsite-popovers/" target="">Onsite popovers</a></li>
+                    <li class="freshPI-Capabilities-Social-Proof tangerine-v2"><a href="/social-proof/" target="">Social proof</a></li>
+                    <li class="freshPI-Capabilities-Dynamic-Content tangerine-v2"><a href="/dynamic-content/" target="">Dynamic content</a></li>
+                    <li class="freshPI-Capabilities-Behavioural-Targeting tangerine-v2"><a href="/behavioral-targeting/" target="">Behavioral targeting</a></li>
+                    <li class="freshPI-Capabilities-Geotargeting tangerine-v2"><a href="/geotargeting/" target="">Geotargeting</a></li>
+                    <li class="freshPI-Capabilities-Optimization tangerine-v2"><a href="/optimization/" target="">Optimization</a></li>
+                    <li class="freshPI-Capabilities-Customer-Data-Management tangerine-v2"><a href="/customer-data-management/" target="">Customer data management</a></li>
+                    <li class="freshPI-Action-Search tangerine-v2"><a href="/search/" target="">Search</a></li>
+                    <li class=" tangerine-v2"><a href="/solutions-summary/" target="">EXPLORE ALL SOLUTIONS</a></li>
+                  </ul>
+</div>
+        </div>
+<div class="col">
+            <div class="submenu-area" style="background:">
+                  <a class="submenu-area-title pre-title">Channels</a>
+                  <ul>
+                    <li class="freshPI-Channels-Cross-Channels watermelon-v2"><a href="/cross-channel-personalization/" target="">Cross-channel personalization</a></li>
+                    <li class="freshPI-Channels-Web watermelon-v2"><a href="/web/" target="">Web</a></li>
+                    <li class="freshPI-Channels-Email watermelon-v2"><a href="/email/" target="">Email</a></li>
+                    <li class="freshPI-Channels-MobileApp watermelon-v2"><a href="/mobile-app/" target="">Mobile app</a></li>
+                    <li class="freshPI-Channels-SMS watermelon-v2"><a href="/sms/" target="">SMS</a></li>
+                    <li class="freshPI-Channels-Ads watermelon-v2"><a href="/ads/" target="">Ads</a></li>
+                  </ul>
+                </div>
+        </div>
+
+<div class="col">
+            <div class="submenu-area" style="background:">
+                  <a class="submenu-area-title pre-title">Industries</a>
+                  <ul>
+                    <li class="freshPI-Industry-Retail plum-v2"><a href="/ecommerce/" target="">eCommerce</a></li>
+                    <li class="freshPI-Company-Careers plum-v2"><a href="/b2b-ecommerce/" target="">B2B eCommerce</a></li>
+                    <li class="freshPI-Industry-Travel plum-v2"><a href="/travel/" target="">Travel</a></li>
+                    <li class="freshPI-Industry-Media plum-v2"><a href="/media/" target="">Media</a></li>
+                    <li class="freshPI-Industry-Recruitment plum-v2"><a href="/recruitment/" target="">Recruitment</a></li>
+                    <li class="freshPI-Enterprise plum-v2"><a href="/enterprise/" target="">Enterprise</a></li>
+                  </ul>
+</div>
+        </div>
+
+<div class="col">
+            <div class="submenu-area" style="background:#fef5f0">
+                  <ul>
+                  </ul>
+<div class="menu-head-img txt-center pb-16">
+<img src="https://www.freshrelevance.com/wp-content/uploads/2023/03/search-module.png">
+</div>
+<h6 class="body-emphasized txt-center mb-8">Feature highlight: Search</h6>
+                  <div class="case-study-btn right-icon-arrow txt-center">
+<a href="/search/" target="_self" class="button-cta navy text-uppercase">Learn More</a>
+</div>
+              </div>
+        </div>
+            
+</div>
+</div>
+</li>
+<li>
+<a target="" href="#">Customers</a>
+<div class="submenu">
+<div class="overflow ">
+<div class="col">
+            <div class="submenu-area" style="background:">
+                  <ul>
+                    <li class=" tangerine-v2"><a href="/success-stories/" target="">Case studies</a></li>
+                    <li class=" tangerine-v2"><a href="/customer-success/" target="">Services &amp; support</a></li>
+                    <li class=" tangerine-v2"><a href="/getting-started/" target="">Getting started</a></li>
+                  </ul>
+</div>
+        </div>
+<div class="col">
+        </div>
+
+<div class="col">
+        </div>
+
+<div class="col">
+        </div>
+            
+</div>
+</div>
+</li>
+<li>
+<a target="" href="#">Partners</a>
+<div class="submenu">
+<div class="overflow ">
+<div class="col">
+            <div class="submenu-area" style="background:">
+                  <ul>
+                    <li class=" tangerine-v2"><a href="/platform/integrations/" target="">Integrations</a></li>
+                    <li class=" tangerine-v2"><a href="/platform/partner-network/" target="">Partners</a></li>
+                    <li class=" tangerine-v2"><a href="/platform/partners/" target="">Become a partner</a></li>
+                    <li class=" tangerine-v2"><a href="/platform/partner-portal/" target="">Partner Portal</a></li>
+                  </ul>
+</div>
+        </div>
+<div class="col">
+        </div>
+
+<div class="col">
+        </div>
+
+<div class="col">
+        </div>
+            
+</div>
+</div>
+</li>
+<li class="no-submenu">
+<a target="" href="/pricing/">Pricing</a>
+</li>
+<li>
+<a target="" href="/resources/">Learn</a>
+<div class="submenu">
+<div class="overflow ">
+<div class="col">
+            <div class="submenu-area" style="background:">
+                  <ul>
+                    <li class="freshPI-Resources-Blog tangerine-v2"><a href="https://www.freshrelevance.com/blog/" target="">Blog</a></li>
+                    <li class="freshPI-Resources-Case-Studies tangerine-v2"><a href="/success-stories/" target="">Case studies</a></li>
+                    <li class="freshPI-Resources-Learning-Path tangerine-v2"><a href="/learning-paths/" target="">Learning paths</a></li>
+                    <li class="freshPI-Resources-Events tangerine-v2"><a href="/company/events/" target="">Events</a></li>
+                    <li class="freshPI-Resources-eBooks tangerine-v2"><a href="/ebooks/" target="">eBooks</a></li>
+                    <li class="freshPI-Resources-Webinars tangerine-v2"><a href="/company/events/category/webinars/" target="">Webinars</a></li>
+                    <li class="freshPI-Resources-LookBooks tangerine-v2"><a href="/lookbooks/" target="">Lookbooks</a></li>
+                    <li class="freshPI-Resources-Videos tangerine-v2"><a href="/videos/" target="">Videos</a></li>
+                    <li class="freshPI-Resources-Reports tangerine-v2"><a href="/reports/" target="">Reports</a></li>
+                    <li class="freshPI-Dynamic-banner tangerine-v2"><a href="/resources/" target="">All Resources</a></li>
+                  </ul>
+</div>
+        </div>
+<div class="col">
+            <div class="submenu-area" style="background:#fef5f0">
+                  <a class="submenu-area-title pre-title">Popular content</a>
+                  <ul>
+                  </ul>
+                  <div class="header-recomend-sec">
+                       <div class="recomend-data">
+                             <div class="recomend-left-col">
+       <img src="https://www.freshrelevance.com/wp-content/uploads/2023/10/Black-Friday-Blog-Nav-Thumbnail.png">
+    </div>
+                                                  <div class="recomend-right-col">
+       <p class="pre-title m-0 tangerine text-uppercase">Blog </p>
+       <h6 class="heading-h6 mb-24">10 killer Black Friday email marketing examples</h6>
+                                    <div class="case-study-btn right-icon-arrow">
+          <a href="/blog/black-friday-email-examples/" target="_self" class="button-cta navy text-uppercase">Read now</a>
+       </div>
+                             </div>
+                       </div>
+                     <div class="recomend-data">
+                             <div class="recomend-left-col">
+       <img src="https://www.freshrelevance.com/wp-content/uploads/2023/12/Predicitions-eBook-Navigation-Thumbnail.png">
+    </div>
+                                                  <div class="recomend-right-col">
+       <p class="pre-title m-0 tangerine text-uppercase">eBook</p>
+       <h6 class="heading-h6 mb-24">9 eCommerce marketing trend predictions for 2024</h6>
+                                    <div class="case-study-btn right-icon-arrow">
+          <a href="/resources/landing-page/ecommerce-marketing-trends-2024/" target="_self" class="button-cta navy text-uppercase">Download now</a>
+       </div>
+                             </div>
+                       </div>
+                  </div>
+              </div>
+        </div>
+
+<div class="col">
+        </div>
+
+<div class="col">
+        </div>
+            
+</div>
+</div>
+</li>
+<li>
+<a target="" href="#">Company</a>
+<div class="submenu">
+<div class="overflow ">
+<div class="col">
+            <div class="submenu-area" style="background:">
+                  <ul>
+                    <li class=" tangerine-v2"><a href="/company/" target="">About us</a></li>
+                    <li class=" tangerine-v2"><a href="/company/contact-us/" target="">Contact us</a></li>
+                    <li class=" tangerine-v2"><a href="/company/careers/" target="">Careers</a></li>
+                    <li class=" tangerine-v2"><a href="/company/press/" target="">Press</a></li>
+                  </ul>
+</div>
+        </div>
+<div class="col">
+        </div>
+
+<div class="col">
+        </div>
+
+<div class="col">
+        </div>
+            
+</div>
+</div>
+</li>
+</ul>
+  </nav>
+<nav class="right-side">
+                      <li id="request-demo-button"><a class="demo-btn" href="/book-demo/">BOOK A DEMO</a></li>
+       <li id="my-account">
+<a href="https://admin.freshrelevance.com/account/login/">
+<img src="/wp-content/uploads/2023/03/account-icon.svg" height="32px" width="32px" alt="Account Icon">
+<p class="extra-small m-0 navy">Login</p>
+</a>
+<!-- <div class="submenu">
+<div class="overflow">
+<div class="col">
+<div class="submenu-area">
+  <div class="submenu-area-title">CLIENT AREA</div>
+  <ul>
+    <li><a href="/getting-started/">Getting Started</a></li>
+    <li><a href="https://admin.freshrelevance.com/account/login/">Login</a></li>
+  </ul>
+</div>
+</div>
+</div>
+</div> -->
+</li>
+  </nav>
+<img src="/wp-content/uploads/2023/02/mobile-menu-icon.svg" width="20px" height="15px" class="mobile-navigation-toggle">
+</div>
+
+
+<div class="trending-dishes">
+  <div class="dish">
+    <img src="dish1.jpg" alt="Dish 1">
+    <div class="dish-info">
+      <h3>Dish Name 1</h3>
+      <p>Description of Dish 1</p>
+    </div>
+  </div>
+  <div class="dish">
+    <img src="dish2.jpg" alt="Dish 2">
+    <div class="dish-info">
+      <h3>Dish Name 2</h3>
+      <p>Description of Dish 2</p>
+    </div>
+  </div>
+  <!-- More dish items can be added here -->
+</div>

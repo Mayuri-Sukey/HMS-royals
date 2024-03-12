@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>table booking</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="style4.css">
+    <link href="login.js">
+    <!--for boxicon css-->
+
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+    
+    <style>
+        /* Modal styles */
+ </style>
+
+
+</head>
+<body>
+
+
+    <header class ="navbar">
+   
+        <div class="header">
+          <div class="topnav" id="myTopnav">
+            
+              <div class="dropdown">
+              <button class="dropbtn">pos
+                <i class="fa fa-caret-down"></i>
+              </button>
+              <div class="dropdown-content">
+                <a href="#">Billing</a>
+                <a href="#">inventory</a>
+                <a href="#">online ordering</a>
+                <a href="#">Reportingg</a>
+                <a href="#">Menu</a>
+                <a href="#">CRM</a>
+              </div>
+            </div>
+    
+              <div class="dropdown">
+                <button class="dropbtn">Add-Ons
+                  <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                  <a href="#">MarketPlace</a>
+                  <a href="#">Marketing Hub</a>
+                  <a href="#">online ordering</a>
+                  <a href="#">Suppliers Hub</a>
+                  <a href="#">Integration</a>
+                </div>
+            </div>
+    
+                <div class="dropdown">
+                    <button class="dropbtn">Outlet Types
+                      <i class="fa fa-caret-down"></i>
+                    </button>
+                    <div class="dropdown-content">
+                      <a href="#">Fine Dine</a>
+                      <a href="#">QSR</a>
+                      <a href="#">Cafe</a>
+                      <a href="#">Food court</a>
+                      <a href="#">Cloud Kithcen</a>
+                    </div>
+               </div>
+    
+                <div> <button class="pricing">pricing</button></div>
+                
+              </div>
+         
+            
+           
+           </div>
+          </header>
+    <br>
+    <br>
+    <br>
+    <br>
+
+
+    <section class="containerbox">
+
+
+   
+<div class="table1">
+    <nav class="sidebar close">
+        
+            <div class="image-text">
+                <span class="image">
+                    <!--<img src="logo.png" alt="">-->
+                </span>
+
+                <div class="text logo-text">
+                    <span class="name">Quick Acces</span>
+                    <!--<span class="profession">Web developer</span>-->
+                </div>
+            </div>
+
+            <i class='bx bx-chevron-right toggle'></i>
+        
+
+        <div class="menu-bar">
+            <div class="menu">
+
+                <li class="search-box">
+                    <i class='bx bx-search icon'></i>
+                    <input type="text" placeholder="Search...">
+                </li>
+
+                <ul class="menu-links">
+                    <li class="nav-link">
+                        <a href="#">
+                            <i class='bx bx-home-alt icon' ></i>
+                            <span class="text nav-text">Dashboard</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-link">
+                        <a href="#">
+                            <i class='bx bx-bar-chart-alt-2 icon' ></i>
+                            <span class="text nav-text">Revenue</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-link">
+                        <a href="#">
+                            <i class='bx bx-bell icon'></i>
+                            <span class="text nav-text">Notifications</span>
+                        </a>
+                    </li>
+                    
+                    <li class="nav-link">
+                        <a href="#">
+                            <i class=' bx bx bxs-cog icon' ></i>
+                            <span class="text nav-text">Setting</span>
+                        </a>
+                    
+
+                    <li class="nav-link">
+                        <a href="contact.html">
+                            <i class='bx bxs-contact icon' ></i>
+                            <span class="text nav-text">Contacts</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-link">
+                        <a href="#">
+                            <i class='bx bx-wallet icon' ></i>
+                            <span class="text nav-text">Wallets</span>
+                        </a>
+                    </li>
+
+                </ul>
+            </div>
+
+            <div class="bottom-content">
+                <li class="">
+                    <a href="petpuja.html">
+                        <i class='bx bx-log-out icon' ></i>
+                        <span class="text nav-text">Logout</span>
+                    </a>
+                </li>
+
+                <li class="mode">
+                    <div class="sun-moon">
+                        <i class='bx bx-moon icon moon'></i>
+                        <i class='bx bx-sun icon sun'></i>
+                    </div>
+                    <span class="mode-text text">Dark mode</span>
+
+                    <div class="toggle-switch">
+                        <span class="switch"></span>
+                    </div>
+                </li>
+                
+            </div>
+        </div>
+
+    </nav>
+
+   <!-- <section-- class="home">
+        <div class="text">Dashboard Sidebar</div>
+    </section-->
+
+    <script>
+        const body = document.querySelector('body'),
+      sidebar = body.querySelector('nav'),
+      toggle = body.querySelector(".toggle"),
+      searchBtn = body.querySelector(".search-box"),
+      modeSwitch = body.querySelector(".toggle-switch"),
+      modeText = body.querySelector(".mode-text text");
+
+
+toggle.addEventListener("click" , () =>{
+    sidebar.classList.toggle("close");
+})
+
+searchBtn.addEventListener("click" , () =>{
+    sidebar.classList.remove("close");
+})
+
+modeSwitch.addEventListener("click" , () =>{
+    body.classList.toggle("dark");
+    
+    if(body.classList.contains("dark")){
+        modeText.innerText = "Light mode";
+    }else{
+        modeText.innerText = "Dark mode";
+        
+    }
+});
+    </script>
+
+</div>
+
+
+
+
+     <div class="tabledesp">
+      <!----<h1 style="font-size: 50px">PetPooja  <i class="fa fa-home"></i></h1>---> 
+      
+       
+      <!---<div class="line">
+        <div>
+        <span class="box1">&nbsp&nbsp&nbsp&nbsp</span>
+        <span >Running Table </span></div>
+        <div><span class="box2">&nbsp&nbsp&nbsp&nbsp</span>
+        <span >booked Table </span></div>
+       <div> <span class="box3">&nbsp&nbsp&nbsp&nbsp</span>
+        <span >printed Table </span></div>
+        <div><span class="box4">&nbsp&nbsp&nbsp&nbsp</span>
+        <span >Running KOT Table </span></div>
+      </div>
+       <br><br>
+       <br>
+       <div class="tables">
+        <!--<h2>Ac premium</h2>-->
+       
+        <div class="acbox">
+        <div ><img src="vacant.png" height="200px"></div>
+        <div ><img src="vacant.png" height="200px"></div>
+        <div ><img src="vacant.png" height="200px"></div>
+        <div ><img src="vacant.png" height="200px"></div>
+        <div ><img src="vacant.png" height="200px"></div>
+        </div>
+        <br>
+        <div>
+           <!--- <h2>GARDEN</h2>-->
+            <br>
+            <div class="gbox">
+             
+            <div  id=vacant1 class="vacant1"></div>
+            <div class="vacant2" ></div>
+            <div  class="vacant3"></div>
+            <div class ="vacant4"></div>
+            <div class="vacant5"></div>
+            </div>
+
+     </div>
+    
+     <br>
+     <div>
+        <!--- <h2>GARDEN</h2>-->
+         <br>
+         <div class="gbox">
+          
+         <div class="vacant1"></div>
+         <div ><img src="vacant.png" height="200px" onclick="toggle()"></div>
+         <div><img src="vacant.png"  height="200px"></div>
+         <div><img src="vacant.png"  height="200px"></div>
+         <div><img src="vacant.png"  height="200px"></div>
+         </div>
+
+  </div>
+ </div>
+
+ 
+
+<!-- ... (your existing HTML) ... -->
+
+<div id="modal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <div id="invoiceDetails" class="invoice-details">
+        <h2>Invoice Details</h2>
+        <p><strong>Invoice ID:</strong> INV-001</p>
+        <p><strong>Customer:</strong> John Doe</p>
+        <p><strong>Date:</strong> December 31, 2023</p>
+        <table>
+          <thead>
+            <tr>
+              <th>Item</th>
+              <th>Quantity</th>
+              <th>Unit Price</th>
+              <th>Total</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Product A</td>
+              <td>2</td>
+              <td>$50</td>
+              <td>$100</td>
+            </tr>
+            <tr>
+              <td>Product B</td>
+              <td>1</td>
+              <td>$75</td>
+              <td>$75</td>
+            </tr>
+            <!-- Add more rows as needed -->
+          </tbody>
+          <tfoot>
+            <tr>
+              <td colspan="3"><strong>Total:</strong></td>
+              <td>$175</td>
+            </tr>
+          </tfoot>
+        </table>
+      </div>
+      
+    </div>
+  </div>
+  <!-- ... (your existing HTML) ... -->
+  
+
+
+     
+
+    </section>
+    <script>
+         // Get all the images that should trigger the popup
+         const images = document.querySelectorAll('.vacant1, .vacant2, .vacant3, .vacant4, .vacant5');
+
+// Get the modal element
+const modal = document.getElementById('modal');
+
+// Get the <span> element that closes the modal within modal-content
+const closeBtn = document.querySelector('.modal-content .close');
+
+// Function to display invoice details in the modal
+function displayInvoiceDetails(invoice) {
+    // Demo invoice details
+    const demoInvoiceContent = `
+        <h2>Invoice Details</h2>
+        <p><strong>Invoice ID:</strong> ${invoice.id}</p>
+        <p><strong>Amount:</strong> ${invoice.amount}</p>
+        <p><strong>Date:</strong> ${invoice.date}</p>
+        <!-- Add more demo invoice details as needed -->
+    `;
+
+    // Display invoice content in the modal
+    document.getElementById('invoiceDetails').innerHTML = demoInvoiceContent;
+
+    // Show the modal
+    modal.style.display = 'block';
+}
+
+// Function to close the modal
+function closeModal() {
+    modal.style.display = 'none';
+}
+
+// Attach click event listeners to each image
+images.forEach(image => {
+    image.addEventListener('click', () => {
+        // Simulating a demo invoice object for each image click
+        const demoInvoice = {
+            id: 'INV-001',
+            amount: '$100',
+            date: 'December 25, 2023',
+
+
+            
+            // Add more demo invoice details if needed
+        };
+        displayInvoiceDetails(demoInvoice);
+    });
+});
+
+// Close the modal when the user clicks on (x) button
+closeBtn.addEventListener('click', closeModal);
+
+// Close the modal when the user clicks anywhere outside the modal
+window.addEventListener('click', (event) => {
+    if (event.target === modal) {
+        closeModal();
+    }
+});
+      </script>
+
+
+
+<!--popup start-->
+
+
+   
+
+    
+    <div class="page" size="A4" id="page">
+        <div class="p-5">
+            <section class="top-content bb d-flex justify-content-between">
+                <div class="logo">
+                    <img src="logo.png" alt="" class="img-fluid">
+                </div>
+                <div class="top-left">
+                    <div class="graphic-path">
+                        <p>Invoice</p>
+                    </div>
+                    <div class="position-relative">
+                        <p>Invoice No. <span>XXXX</span></p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="store-user mt-5">
+                <div class="col-10">
+                    <div class="row bb pb-3">
+                        <div class="col-7">
+                            <p>Supplier,</p>
+                            <h2>Your Store Name</h2>
+                            <p class="address"> 777 Brockton Avenue, <br> Abington MA 2351, <br>Vestavia Hills AL </p>
+                            <div class="txn mt-2">TXN: XXXXXXX</div>
+                        </div>
+                        <div class="col-5">
+                            <p>Client,</p>
+                            <h2>Sabur Ali</h2>
+                            <p class="address"> 777 Brockton Avenue, <br> Abington MA 2351, <br>Vestavia Hills AL </p>
+                            <div class="txn mt-2">TXN: XXXXXXX</div>
+                        </div>
+                    </div>
+                    <div class="row extra-info pt-3">
+                        <div class="col-7">
+                            <p>Payment Method: <span>bKash</span></p>
+                            <p>Order Number: <span>#868</span></p>
+                        </div>
+                        <div class="col-5">
+                            <p>Deliver Date: <span>10-04.2021</span></p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="product-area mt-4">
+                <table class="table table-hover">
+                    <thead>
+                        <tr>
+                            <td>Item Description</td>
+                            <td>Price</td>
+                            <td>Quantity</td>
+                            <td>Total</td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <div class="media">
+                                    <img class="mr-3 img-fluid" src="mobile.jpg" alt="Product 01">
+                                    <div class="media-body">
+                                        <p class="mt-0 title">Media heading</p>
+                                        Cras sit amet nibh libero, in gravida nulla.
+                                    </div>
+                                </div>
+                            </td>
+                            <td>200$</td>
+                            <td>1</td>
+                            <td>200$</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="media">
+                                    <img class="mr-3 img-fluid" src="mobile-2.jpg" alt="Product 01">
+                                    <div class="media-body">
+                                        <p class="mt-0 title">Media heading</p>
+                                        Cras sit amet nibh libero, in gravida nulla.
+                                    </div>
+                                </div>
+                            </td>
+                            <td>300$</td>
+                            <td>2</td>
+                            <td>600$</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <section class="balance-info">
+                <div class="row">
+                    <div class="col-8">
+                        <p class="m-0 font-weight-bold"> Note: </p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. In delectus, adipisci vero est dolore praesentium.</p>
+                    </div>
+                    <div class="col-4">
+                        <table class="table border-0 table-hover">
+                            <tr>
+                                <td>Sub Total:</td>
+                                <td>800$</td>
+                            </tr>
+                            <tr>
+                                <td>Tax:</td>
+                                <td>15$</td>
+                            </tr>
+                            <tr>
+                                <td>Deliver:</td>
+                                <td>10$</td>
+                            </tr>
+                            <tfoot>
+                                <tr>
+                                    <td>Total:</td>
+                                    <td>825$</td>
+                                </tr>
+                            </tfoot>
+                        </table>
+
+                        <!-- Signature -->
+                        <div class="col-12">
+                            <img src="signature.png" class="img-fluid" alt="">
+                            <p class="text-center m-0"> Director Signature </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Cart BG -->
+            <img src="cart.jpg" class="img-fluid cart-bg" alt="">
+
+            <footer>
+                <hr>
+                <p class="m-0 text-center">
+                    View THis Invoice Online At - <a href="#!"> invoice/saburbd.com/#868 </a>
+                </p>
+                <div class="social pt-3">
+                    <span class="pr-2">
+                        <i class="fas fa-mobile-alt"></i>
+                        <span>0123456789</span>
+                    </span>
+                    <span class="pr-2">
+                        <i class="fas fa-envelope"></i>
+                        <span>me@saburali.com</span>
+                    </span>
+                    <span class="pr-2">
+                        <i class="fab fa-facebook-f"></i>
+                        <span>/sabur.7264</span>
+                    </span>
+                    <span class="pr-2">
+                        <i class="fab fa-youtube"></i>
+                        <span>/abdussabur</span>
+                    </span>
+                    <span class="pr-2">
+                        <i class="fab fa-github"></i>
+                        <span>/example</span>
+                    </span>
+                </div>
+            </footer>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+<!--popup start-->
+
+
+
+</body>
+
+
+
+
+</html>

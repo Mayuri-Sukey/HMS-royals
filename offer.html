@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Offers</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="admin.css" />
+    <link rel = "stylesheet" href="offer.css"/>
+    <link href="login.js" />
+    <!--for boxicon css-->
+
+    <link
+      href="https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    
+    <style>
+      
+</style>
+    </style>
+  </head>
+
+  <body>
+    <section id="sidebar">
+      <a href="#" class="brand">
+        <i class="bx bxs-smile"></i>
+        <span class="text">AdminHub</span>
+      </a>
+      <ul class="side-menu top">
+        <li>
+          <a href="admin.html">
+            <i class="bx bxs-dashboard"></i>
+            <span class="text">Dashboard</span>
+          </a>
+        </li>
+        <li>
+          <a href="adminmenu.html">
+            <i class="bx bxs-shopping-bag-alt"></i>
+            <span class="text">Menu</span>
+          </a>
+        </li>
+        <li class="active">
+          <a href="offer.html">
+            <i class='bx bxs-offer' ></i>
+            <span class="text">offers</span>
+          </a>
+        </li>
+  
+        <li>
+          <a href="analytics.html">
+            <i class="bx bxs-doughnut-chart"></i>
+            <span class="text">Analytics</span>
+          </a>
+          </li>
+        <li>
+          <a href="#">
+            <i class='bx bxs-box' ></i>
+            <span class="text">Inventory</span>
+          </a>
+        </li>
+        <li>
+          <a href="callender.html">
+            <i class='bx bxs-calendar' ></i>
+            <span class="text">calendar</span>
+          </a>
+        </li>
+        
+      </ul>
+      <ul class="side-menu">
+        <li>
+          <a href="setting.html">
+            <i class='bx bxs-cog' ></i>
+            <span class="text">Settings</span>
+          </a>
+        </li>
+        <li>
+          <a href="index.html" class="logout">
+            <i class="bx bxs-log-out-circle"></i>
+            <span class="text">Logout</span>
+          </a>
+        </li>
+      </ul>
+    </section>
+
+
+
+<!-- CONTENT -->
+<section id="content">
+    <!-- NAVBAR -->
+    <nav>
+        <i class='bx bx-menu' ></i>
+        <img src="img/hotellogo1.png" height="60px">
+        <form action="#">
+            <div class="form-input">
+                <input type="search" placeholder="Search...">
+                <button type="submit" class="search-btn"><i class='bx bx-search' ></i></button>
+            </div>
+        </form>
+        <!--<input type="checkbox" id="switch-mode" hidden>
+        <label for="switch-mode" class="switch-mode"></label>-->
+                <a href="#" class="notification">
+            <i class='bx bxs-bell' ></i>
+            <span class="num">8</span>
+        </a>
+        
+
+       <!---- <a href="#" class="profile">
+            <img src="img/people.png">
+        </a>-->
+    </nav>
+    <!-- NAVBAR -->
+   
+
+ <!--menu content-->
+
+
+ <main >
+ <div id="bgblur" class="bgblur">
+    <div class="head-title">
+        <div class="left">
+           
+            <ul class="breadcrumb">
+                <li>
+                    <a href="receptionist.css">Dashboard</a>
+                </li>
+                <li><i class='bx bx-chevron-right' ></i></li>
+                <li>
+                    <a class="active" href="offer.html"><h3>Offers</h3></a>
+                </li>
+            </ul>
+        </div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <button type="button" class="button1" onclick="addformdelay()">
+          <span class="button__text">Add Offers</span>
+          <span class="button__icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" viewBox="0 0 24 24" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" stroke="currentColor" height="24" fill="none" class="svg"><line y2="19" y1="5" x2="12" x1="12"></line><line y2="12" y1="12" x2="19" x1="5"></line></svg></span>
+        </button>
+        <button type="button" class="button" onclick="deleteformdelay()">
+          <span class="button__text">Delete </span>
+          <span class="button__icon">
+    <svg
+    stroke="currentColor"
+    viewBox="0 0 24 24"
+    fill="none"
+    style="width: 1.5rem; height: 1.5rem;"
+    class="h-3 w-3 mr-2"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path
+      d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"
+      stroke-width="2"
+      stroke-linejoin="round"
+      stroke-linecap="round"
+    ></path>
+  </svg>
+          </span>
+          
+        </button>
+    </div>
+    
+ </main>
+ 
+ <div class="offers" id="offers">
+  <!--    <div class="offer1">
+       <div class="off">50% off</div>
+       <div class="off-des">
+        <p>50% Flat Off Upto Rs. 100 on Food Orders</p>
+        <ul>
+          <li>This coupon code is applicable for new users only</li>
+          <li>Order it now.</li>
+          <li>Can be availed once per user per day</li>
+        </ul>
+       </div>
+       <div>
+        <img src ="img/offer.jpg" class="offer-img">
+      </div>
+   </div>
+
+   <div class="offer1">
+    <div class="off">&#8377 200 Off
+    </div>
+    <div class="off-des">
+     <p>Our Promo Code | Get Flat Rs. 200 Off</p>
+     <ul>
+       <li>Food offers flat Rs. 200 Off.</li>
+       <li>Min Order Rs. 699 and above.</li>
+       <li>Applicable on selected slots only.</li>
+     </ul>
+    </div>
+    <div>
+     <img src ="img/todayoffer.png" class="offer-img">
+   </div>
+</div>
+
+<div class="offer1">
+  <div class="off">Flat 20% Off
+  </div>
+  <div class="off-des">
+   <p>Get Flat 20% Off on your Order.</p>
+   <ul>
+     <li>We offers flat 20% Off on your order.</li>
+     <li>Min Order Rs. 600 and above.</li>
+     <li>Order now</li>
+   </ul>
+  </div>
+  <div>
+   <img src ="img/offer20.jpeg" class="offer-img">
+ </div>
+</div>-->
+
+</div>
+
+ <div class="container" id="container">
+  <span class="close" id="close" onclick="close11111()">&times;</span>
+  <h2>Add Offers <Menu></Menu></h2>
+  <form id="updateForm">
+    <div class="form-group">
+      <label for="dishName"></label>Offer Name:</label>
+      <input type="text" id="dishName" name="dishName" required>
+    </div>
+   
+    <div class="form-group">
+      <label for="description">Description:</label>
+      <textarea id="description" name="description" rows="4" required></textarea>
+    </div>
+    <div class="form-group">  
+      <label for="photo">Photo:</label>   
+      <input type="file" id="photo" name="photo">
+    </div>
+    <div class="form-group">
+      <button type="submit" onclick="close11111()">Save </button>
+    </div>
+  </form>
+</div></div>
+<br><br><br><br><br><br><br>
+
+<div class="container" id="container2">
+  <span class="close" id="close" onclick="close2()">&times;</span>
+  <h2>Delete Offers <Menu></Menu></h2>
+  <form id="updateForm">
+    <div class="form-group">
+      <label for="dishName"></label>Offer Name:</label>
+      <input type="text" id="dishName" name="dishName" required>
+    </div>
+     
+    <div class="form-group">
+      <button type="submit" onclick="close2()">Delete </button>
+    </div>
+  </form>
+</div></div>
+
+</section>
+ <script>
+    const allSideMenu = document.querySelectorAll('#sidebar .side-menu.top li a');
+
+    allSideMenu.forEach(item=> {
+        const li = item.parentElement;
+    
+        item.addEventListener('click', function () {
+            allSideMenu.forEach(i=> {
+                i.parentElement.classList.remove('active');
+            })
+            li.classList.add('active');
+        })
+    });
+    
+    
+    
+    
+    // TOGGLE SIDEBAR
+    const menuBar = document.querySelector('#content nav .bx.bx-menu');
+    const sidebar = document.getElementById('sidebar');
+    
+    menuBar.addEventListener('click', function () {
+        sidebar.classList.toggle('hide');
+    })
+    
+  
+    const searchButton = document.querySelector('#content nav form .form-input button');
+    const searchButtonIcon = document.querySelector('#content nav form .form-input button .bx');
+    const searchForm = document.querySelector('#content nav form');
+    
+    searchButton.addEventListener('click', function (e) {
+        if(window.innerWidth) {
+            e.preventDefault();
+            searchForm.classList.toggle('show');
+            if(searchForm.classList.contains('show')) {
+                searchButtonIcon.classList.replace('bx-search', 'bx-x');
+            } else {
+                searchButtonIcon.classList.replace('bx-x', 'bx-search');
+            }
+        }
+    })
+    
+    
+    
+    
+    
+    if(window.innerWidth ) {
+        sidebar.classList.add('hide');
+    } else if(window.innerWidth > 576) {
+        searchButtonIcon.classList.replace('bx-x', 'bx-search');
+        searchForm.classList.remove('show');
+    }
+    
+    
+    window.addEventListener('resize', function () {
+        if(this.innerWidth > 576) {
+            searchButtonIcon.classList.replace('bx-x', 'bx-search');
+            searchForm.classList.remove('show');
+        }
+    })
+
+  
+
+/*sript to offers dynamically*/
+
+    let offersData = [
+      {
+        id: 'offer1',
+        discount: '50% off',
+        description: '50% Flat Off Upto Rs. 100 on Food Orders',
+        points: [
+          'This coupon code is applicable for new users only',
+          'Order it now.',
+          'Can be availed once per user per day'
+        ],
+        imageSrc: 'img/offer.jpg'
+      },
+      {
+        id: 'offer2',
+        discount: '&#8377 200 Off',
+        description: 'Our Promo Code | Get Flat Rs. 200 Off',
+        points: [
+          'Food offers flat Rs. 200 Off.',
+          'Min Order Rs. 699 and above.',
+          'Applicable on selected slots only.'
+        ],
+        imageSrc: 'img/todayoffer.png'
+      },
+      {
+        id: 'offer3',
+        discount: 'Flat 20% Off',
+        description: 'Get Flat 20% Off on your Order.',
+        points: [
+          'We offers flat 20% Off on your order.',
+          'Min Order Rs. 600 and above.',
+          'Order now'
+        ],
+        imageSrc: 'img/offer20.jpeg'
+      }
+    ];
+
+function createOfferElement(offerData) {
+      const offerContainer = document.getElementById('offers');
+      const offerDiv = document.createElement('div');
+      offerDiv.classList.add('offer1');
+      offerDiv.id = offerData.id; // Assigning unique ID
+
+      const discountDiv = document.createElement('div');
+      discountDiv.classList.add('off');
+      discountDiv.innerHTML = offerData.discount;
+
+      const descriptionDiv = document.createElement('div');
+      descriptionDiv.classList.add('off-des');
+      descriptionDiv.innerHTML = `<p>${offerData.description}</p>`;
+
+      const pointsList = document.createElement('ul');
+      offerData.points.forEach(point => {
+        const pointItem = document.createElement('li');
+        pointItem.textContent = point;
+        pointsList.appendChild(pointItem);
+      });
+      descriptionDiv.appendChild(pointsList);
+
+      const imageDiv = document.createElement('div');
+      const image = document.createElement('img');
+      image.classList.add('offer-img');
+      image.src = offerData.imageSrc;
+      imageDiv.appendChild(image);
+
+      offerDiv.appendChild(discountDiv);
+      offerDiv.appendChild(descriptionDiv);
+      offerDiv.appendChild(imageDiv);
+
+      offerContainer.appendChild(offerDiv);
+
+}
+
+// Function to create offer elements using the offersData array
+function createOfferElements() {
+  const offerContainer = document.getElementById('offers');
+  offerContainer.innerHTML = ''; // Clear the container before rendering
+
+  offersData.forEach(offer => {
+    createOfferElement(offer);
+  });
+}
+
+// Rest of your code remains the same...
+
+// Call createOfferElements to initially display offers with delete buttons
+createOfferElements();
+
+
+
+
+
+
+    
+
+    // Function to create offer elements using the offersData array
+    function createOfferElements() {
+  const offerContainer = document.getElementById('offers');
+  offerContainer.innerHTML = ''; // Clear the container before rendering
+
+  offersData.forEach(offer => {
+    createOfferElement(offer);
+  });
+}
+
+// Function to add an offer
+function addOffer(event) {
+  event.preventDefault();
+
+  const dishName = document.getElementById('dishName').value;
+  const description = document.getElementById('description').value;
+  const photoInput = document.getElementById('photo');
+
+  if (photoInput.files.length > 0) {
+    const file = photoInput.files[0];
+    const reader = new FileReader();
+
+    reader.onload = function(event) {
+      const imageSrc = event.target.result;
+
+      const newOffer = {
+        id: `offer${offersData.length + 1}`, // Generate a unique ID for the new offer
+        discount: dishName,
+        description: description,
+        points: [], // You may need to handle the points or additional data here
+        imageSrc: imageSrc // Use the extracted image data URL
+      };
+
+      offersData = [...offersData, newOffer];
+      createOfferElements();
+    };
+
+    reader.readAsDataURL(file);
+  } else {
+    const newOffer = {
+      id: `offer${offersData.length + 1}`,
+      discount: dishName,
+      description: description,
+      points: [], // You may need to handle the points or additional data here
+      imageSrc: '' // Provide a default image if no file is selected
+    };
+
+    offersData = [...offersData, newOffer];
+    createOfferElements();
+  }
+}  // Add the new offer to the existing offersData array
+  
+
+// Event listener for form submission
+document.getElementById('updateForm').addEventListener('submit', addOffer);
+
+// Function call to create offer elements when the page loads initially
+createOfferElements();
+
+
+  /*form to add offer*/
+    function addformdelay() {
+    setTimeout(addform, 0); // 2000 milliseconds = 2 seconds
+}
+
+function deleteformdelay() {
+    setTimeout(deleteform, 0); // 2000 milliseconds = 2 seconds
+}
+  
+       function addform(){
+              var container=document.getElementById('container');
+             container.classList.toggle('active');
+             var offers=document.getElementById('offers');
+              offers.classList.toggle('active');
+              
+           }
+
+     function close11111() {
+      var container = document.getElementById('container');
+      container.classList.remove('active');
+      var offers = document.getElementById('offers');
+      offers.classList.remove('active');
+
+   }
+
+   function deleteform(){
+              var container=document.getElementById('container2');
+             container2.classList.toggle('active');
+             var offers=document.getElementById('offers');
+              offers.classList.toggle('active');
+              
+           }
+
+           function close2() {
+      var container = document.getElementById('container2');
+      container2.classList.remove('active');
+      var offers = document.getElementById('offers');
+      offers.classList.remove('active');
+
+   }      
+
+
+   document.addEventListener('click', function(event) {
+  const activeView = document.getElementById('container');
+  const activeView2 = document.getElementById('container2');
+
+  // Check if the clicked element is the active view or a descendant of the active view
+  const isClickedInsideActiveView = activeView.contains(event.target);
+  const isClickedInsideActiveView2 = activeView2.contains(event.target);
+
+
+  if (!isClickedInsideActiveView && !isClickedInsideActiveView2) {
+    // Click occurred outside the active view
+    // Change the active view's color to red
+    close11111();
+    close2();
+  } 
+
+});
+  
+  
+        
+         /*form css*/
+  // This is where you'd handle form submission and updating the dish information
+  document.getElementById('updateForm').addEventListener('submit', function(event) {
+  event.preventDefault(); // Prevent form submission and page reload
+  
+  // Get form data
+  const formData = new FormData(this);
+  
+
+
+  // Convert FormData to a plain object
+  const data = {};
+  formData.forEach(function(value, key){
+    data[key] = value;
+  });
+
+  // Log form data in the console
+  console.log(data);
+
+});
+
+
+
+</script>
+
+
+ </body>
+
+
+
+    
+ </html>

@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style3.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+
+  <link href="login.js">
+  <title>Login Page</title>
+</head>
+<body>
+  <header class="navbar">
+  <div class="nav"><img src="img/hotellogo1.png" height="100px">
+    <!-- <h1 class ="heading">HMS</h1> -->
+  </div>
+   
+     <!---<div class="header1">
+        <div class="topnav" id="myTopnav">
+          <div><img src="logor.png" height="80px"></div>
+          
+          <div class="dropdown">
+           <button class="dropbtn">pos
+              <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+              <a href="#">Billing</a>
+              <a href="#">inventory</a>
+              <a href="#">online ordering</a>
+              <a href="#">Reportingg</a>
+              <a href="#">Menu</a>
+              <a href="#">CRM</a>
+            </div>
+           </div>
+  
+            <div class="dropdown">
+              <button class="dropbtn">Add-Ons
+                <i class="fa fa-caret-down"></i>
+              </button>
+              <div class="dropdown-content">
+                <a href="#">MarketPlace</a>
+                <a href="#">Marketing Hub</a>
+                <a href="#">online ordering</a>
+                <a href="#">Suppliers Hub</a>
+                <a href="#">Integration</a>
+              </div>
+            </div>
+  
+            <div class="dropdown">
+                  <button class="dropbtn">Outlet Types
+                    <i class="fa fa-caret-down"></i>
+                  </button>
+                  <div class="dropdown-content">
+                    <a href="#">Fine Dine</a>
+                    <a href="#">QSR</a>
+                    <a href="#">Cafe</a>
+                    <a href="#">Food court</a>
+                    <a href="#">Cloud Kithcen</a>
+                  </div>
+            </div>
+  
+            <div> <button class="pricing">pricing</button></div>
+
+            <div class=" button">
+              
+              <Stack direction='row' spacing={4} align='center'>
+                <Button   >
+                 setting
+                </Button>
+                
+              </Stack> 
+
+            </div>
+              
+           </div>
+       
+          
+         
+        </div>
+     </header>
+  <br>
+  <br>
+  <br>
+  <br>
+
+
+  </header>-->
+
+  <!--<br><br><br><br>
+
+  <main>
+    <section class="pos">
+      <div class="wrap">
+        <h1>Restaurant POS software made simple!</h1>
+        <p>Manages all your restaurant operations efficiently so that you can focus on growing your brand, like a real boss!</p>
+        <button class="demo">Take a free demo</button>
+      </div>-->
+      
+      <div class="wrap-image">
+        <div class="form">
+          <div class="login">
+            <div class="login-header">
+              <h3>LOGIN</h3>
+            
+            </div>
+          </div>
+          <form class="login-form">
+            <input type="text" placeholder="username" id="username" required />
+            <input type="password" placeholder="password" id="password" required />
+            <button id="loginButton">Login</button>
+            
+          </form>
+          <button class="forgot-password" id="openModalBtn">Forgot Password ?</button>
+         
+        </div>
+      
+      </div>
+
+
+      <div id="myModal" class="modal">
+        <div class="modal-content">
+          <span class="close">&times;</span>
+  
+          <!-- EMAIL DIV -->
+          <div class="subscribe">
+            <div class="email-main-div">
+              <!-- email -->
+              <div class="email-div">
+                <p>FORGOT PASSWORD</p>
+                <input
+                id="email"
+                  placeholder="Your e-mail"
+                  class="subscribe-input"
+                  name="email"
+                  type="email"
+                />
+                <br />
+                <div class="radio">
+                <input type="radio" value="admin" name="istrue"  id="admin"><label>Admin</label>
+                <input type="radio" value="manager" name="istrue"  id="manager"><label>Manager</label>
+              </div>
+                <div class="submit-btn">SUBMIT</div>
+              </div>
+  
+              <!-- otp -->
+              <div class="otp-div">
+                <p>VARIFY OTP</p>
+                <input
+                id="otp"
+                  placeholder="Your OTP"
+                  class="subscribe-input"
+                  name="otp"
+                  type="number"
+                  maxlength="6"
+                />
+                <br />
+                <div class="submit-btn submit-otp">SUBMIT OTP</div>
+              </div>
+  
+              <!-- CONFIRM PASS -->
+              <div class="password-div">
+                <p>Change PASSWORD</p>
+                <input
+                  placeholder="Confirm New Password "
+                  class="subscribe-input1"
+                  name="pass"
+                  type="password"  required 
+                  id="confirmNewPassword"
+                />
+                <input
+                  placeholder="Enter New Password"
+                  class="subscribe-input2"
+                  name="cpass"
+                  type="password"
+                  id="newPassword"
+
+                />
+                <br />
+                <div class="submit-btn" id="submitBtn">SUBMIT</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+  
+   
+    </section>
+
+    <br><br>
+
+    
+  </main>
+  <footer class="footer">
+   Designed and Developed by &#169;Royals webTech 2024
+  </footer>
+
+
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      const loginButton = document.getElementById('loginButton');
+
+      loginButton.addEventListener('click', function(event) {
+        event.preventDefault(); // Prevents the form from submitting
+
+        const username = document.getElementById('username').value;
+        const password = document.getElementById('password').value;
+
+       const payload = {
+        
+        username:username.toString(),
+         password:password.toString()
+ };
+
+        const fetchadmindata = async () => {
+    try {
+
+      console.log("PAhy ",payload);
+ 
+        const response = await fetch('https://polliwog-immune-stallion.ngrok-free.app/restaurant/login/manager/admin', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                "ngrok-skip-browser-warning": "true",
+            },
+            body: JSON.stringify(payload),
+        });
+
+        if (response.status==202) {
+            console.log("Login succesfully");
+            const responseText = await response.text();
+
+           if(responseText == "admin")
+           {
+            window.location.href = 'admin.html';
+           }else if (responseText == "manager") {
+            window.location.href = 'reseptionist.html';
+           }else{
+            alert("Wrong username or password");
+           }
+          
+        } else{
+          console.log("Wrong username or password");
+          // const test = await response.text();
+
+          // Swal.fire(test);
+        }
+    } catch (error) {
+    alert()
+        console.error('Error deleting table data:', error);
+    }
+};
+fetchadmindata();
+      });
+    });
+
+
+
+    // forgot password
+    
+
+    // Get the modal
+var modal = document.getElementById("myModal");
+
+// Get the button that opens the modal
+var btn = document.getElementById("openModalBtn");
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// Get the submit button inside the modal
+var submitBtn = document.querySelector(".submit-btn");
+var submitotpBtn = document.querySelector(".submit-otp");
+
+
+// Get the email, OTP, and password divs
+var emailDiv = document.querySelector(".email-div");
+var otpDiv = document.querySelector(".otp-div");
+var passwordDiv = document.querySelector(".password-div");
+
+// Function to switch between email, OTP, and password divs
+function switchDivs(divToShow) {
+  emailDiv.style.display = "none";
+  otpDiv.style.display = "none";
+  passwordDiv.style.display = "none";
+
+  if (divToShow === "email") {
+    emailDiv.style.display = "block";
+  } else if (divToShow === "otp") {
+    otpDiv.style.display = "block";
+  } else if (divToShow === "password") {
+    passwordDiv.style.display = "block";
+  }
+}
+
+// When the user clicks on the button, open the modal
+btn.onclick = function () {
+  modal.style.display = "block";
+  switchDivs("email"); // Show email div by default
+};
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function () {
+  modal.style.display = "none";
+};
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function (event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+};
+
+// When the user clicks on submit button, switch to OTP div
+submitBtn.onclick = function () {
+  const email = document.getElementById("email").value;
+     var adminRadio = document.getElementById("admin");
+        var managerRadio = document.getElementById("manager");
+        var role;
+
+        if (adminRadio.checked) {
+          role = adminRadio.value;
+        } else if (managerRadio.checked) {
+          role = managerRadio.value;
+        } else {
+            // Handle case where no radio button is selected
+            role = "No role selected";
+        }
+
+  if (!(email === "" || email === null) && email.endsWith("@gmail.com")) {
+    const fetchInvoiceData = async () => {
+      try {
+        const response = await fetch("https://polliwog-immune-stallion.ngrok-free.app/email/sendotp", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            "ngrok-skip-browser-warning": "true",
+          },
+          body: JSON.stringify({
+            email: email,
+            roll:role,
+          }),
+        });
+
+        if (response.ok) {
+          console.log("Otp send successfullly");
+          switchDivs("otp");
+        } else if (response.status == 404) {
+          const responsetext = await response.text();
+          alert(responsetext);
+        } else {
+          console.log("Unable to send otp");
+        }
+      } catch (error) {
+        console.error("Error To send otp");
+      }
+    };
+
+    fetchInvoiceData();
+  } else {
+    alert("Please Enter the Valid Email Id");
+  }
+};
+
+// this call whenever the submit otp calls
+submitotpBtn.onclick = function () {
+  const email = document.getElementById("email").value;
+  const otp = document.getElementById("otp").value;
+  var adminRadio = document.getElementById("admin");
+        var managerRadio = document.getElementById("manager");
+        var role;
+
+        if (adminRadio.checked) {
+          role = adminRadio.value;
+        } else if (managerRadio.checked) {
+          role = managerRadio.value;
+        } else {
+            // Handle case where no radio button is selected
+            role = "No role selected";
+        }
+
+
+  console.log(email, otp);
+
+  if (!(otp === "" || otp === null)) {
+    const fetchInvoiceData = async () => {
+      try {
+        const response = await fetch(
+          "https://polliwog-immune-stallion.ngrok-free.app/email/authenticate",
+          {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+              "ngrok-skip-browser-warning": "true",
+            },
+            body: JSON.stringify({
+              email: email,
+              roll:role,
+              otp: parseInt(otp),
+            }),
+          }
+        );
+
+        if (response.ok) {
+          console.log("Otp successfullly Varified");
+        
+ 
+          switchDivs("password");
+        } else if (response.status == 401) {
+          const responsetext = await response.text();
+          alert(responsetext);
+        } else if (response.status == 404) {
+          const responsetext = await response.text();
+          alert(responsetext);
+        } else {
+          console.log("Incorrect OTP");
+        }
+      } catch (error) {
+        console.error("Error To send otp");
+      }
+    };
+
+    fetchInvoiceData();
+  } else {
+    alert("Please Eneter the Valid OTP");
+  }
+};
+
+// const ChangePassword = async () => {
+//   const password = document.getElementById("confirmNewPassword");
+//   const email = document.getElementById("email").value;
+//      var adminRadio = document.getElementById("admin");
+//         var managerRadio = document.getElementById("manager");
+//         var role;
+//       try {
+//         const response = await fetch("https://polliwog-immune-stallion.ngrok-free.app/restaurant/password/changepass", {
+//           method: "POST",
+//           headers: {
+//             "Content-Type": "application/json",
+//             "ngrok-skip-browser-warning": "true",
+//           },
+//           body: JSON.stringify({
+//             email: email,
+//             roll:role,
+//             password:
+//           }),
+//         });
+
+//         if (response.ok) {
+//           console.log("Password Change Succesfuly");
+
+          
+//         } else if (response.status == 404) {
+//           const responsetext = await response.text();
+//           alert(responsetext);
+//         } else {
+//           console.log("Unable to send otp");
+//         }
+//       } catch (error) {
+//         console.error("Error To send otp");
+//       }
+//     };
+
+    
+   
+  
+   async function  submitBtnClicked() {
+      console.log("Submit button clicked");
+      var email = document.getElementById("email").value;
+     var adminRadio = document.getElementById("admin");
+        var managerRadio = document.getElementById("manager");
+        var role;
+        if (adminRadio.checked) {
+          role = adminRadio.value;
+        } else if (managerRadio.checked) {
+          role = managerRadio.value;
+        } else {
+            // Handle case where no radio button is selected
+            role = "No role selected";
+        }
+      const password1 = document.getElementById("newPassword").value;
+      const passwrod2  =document.getElementById("confirmNewPassword").value;
+
+      if(password1 === passwrod2)
+      {
+        console.log("same")
+        console.log("email",email);
+        console.log("pass",role);
+        console.log("role",password1);
+        try {
+        const response = await fetch("https://polliwog-immune-stallion.ngrok-free.app/restaurant/password/changepass", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            "ngrok-skip-browser-warning": "true",
+          },
+          body: JSON.stringify({
+            email: email,
+            roll:role,
+            password:password1,
+          }),
+        });
+
+        if (response.ok) {
+          console.log("Password Change Succesfuly");
+          document.getElementById("email").value ="";
+          document.getElementById("otp").value = "";
+        } else if (response.status == 404) {
+          const responsetext = await response.text();
+          alert(responsetext);
+        } else {
+          console.log("Unable to send otp");
+        }
+      } catch (error) {
+        console.error("Error To send otp");
+      }
+      }else{
+        alert("Please Enter Same Password");
+      }
+
+    }
+
+    // Attaching event listener to the submit button
+    document.getElementById("submitBtn").addEventListener("click", submitBtnClicked);
+ 
+
+
+  </script>
+</body>
+</html>

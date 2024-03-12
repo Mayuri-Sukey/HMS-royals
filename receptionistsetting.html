@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Receptionist setting</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="menu.css" />
+    <link rel="stylesheet" href="setting.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    
+
+    <link href="login.js" />
+    <!--for boxicon css-->
+
+    <link
+      href="https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <style>
+      
+</style>
+    </style>
+  </head>
+
+  <body>
+    <section id="sidebar">
+      <a href="#" class="brand">
+        <i class='bx bxs-smile'></i>
+        <span class="text">Receptionist</span>
+      </a>
+      <ul class="side-menu top">
+        <li >
+          <a href="reseptionist.html">
+            <i class='bx bxs-dashboard' ></i>
+            <span class="text">Dashboard</span>
+          </a>
+        </li>
+        <li>
+          <a href="Menus.html">
+            <i class='bx bxs-shopping-bag-alt' ></i>
+            <span class="text">Menu</span>
+          </a>
+        </li>
+              <li>
+          <a href="receptionist-offer.html">
+            <i class='bx bxs-offer' ></i>
+            <span class="text">offers</span>
+          </a>
+        </li>
+                
+        
+        <li>
+          <a href="#">
+            <i class='bx bxs-box' ></i>
+            <span class="text">Inventory</span>
+          </a>
+        </li>
+        <li>
+          <a href="callenderreceptionist.html">
+            <i class='bx bxs-calendar' ></i>
+            <span class="text">calendar</span>
+          </a>
+        </li>
+        
+      </ul>
+      <ul class="side-menu">
+        <li class="active">
+          <a href="receptionistsetting.html">
+            <i class='bx bxs-cog' ></i>
+            <span class="text">Settings</span>
+          </a>
+        </li>
+        <li>
+          <a href="index.html" class="logout">
+            <i class='bx bxs-log-out-circle' ></i>
+            <span class="text">Logout</span>
+          </a>
+        </li>
+      </ul>
+    </section>
+
+
+<!-- CONTENT -->
+<section id="content">
+    <!-- NAVBAR -->
+    <nav>
+        <i class='bx bx-menu' ></i>
+        <img src="img/hotellogo1.png" height="60px">
+        <form action="#">
+            <div class="form-input">
+                <input type="search" placeholder="Search...">
+                <button type="submit" class="search-btn"><i class='bx bx-search' ></i></button>
+            </div>
+        </form>
+        <!--<input type="checkbox" id="switch-mode" hidden>
+        <label for="switch-mode" class="switch-mode"></label>-->
+        
+       <!-- <a href="#" class="notification">
+            <i class='bx bxs-bell' ></i>
+            <span class="num">8</span>
+        </a>-->
+        
+
+       <!---- <a href="#" class="profile">
+            <img src="img/people.png">
+        </a>-->
+    </nav>
+    <main>
+    <div class="head-title">
+      <div class="left">
+        
+        <ul class="breadcrumb">
+          <li>
+            <a href="reseptionist.html">Dashboard</a>
+          </li>
+          <li><i class='bx bx-chevron-right' ></i></li>
+          <li>
+            <a class="active" href="receptionistsetting.html">Setting</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </main>
+  
+  <div class="setting-container">
+        
+        <div class="card">
+              <div class="user-details">
+                <img src="receptionist-removebg-preview.png">
+                <div class="details">
+                    <h1>Current User Details</h1>
+                    <br><br><br>
+                    <p>Username : &nbsp;&nbsp;<span id="current-username">maneger</span></p>
+                    <br>
+                    <p>Password : &nbsp;<span id="hidden-password" style="display: none;">321</span>
+                      <span class="password" id="current-password" style="font-family: monospace;"></span>
+                      <i class="toggle-password fas fa-eye-slash" onclick="togglePasswordVisibility()"></i>
+                      
+                    </p> <br>
+            <button class="Btn" onclick="toggleform()">Edit 
+              <svg class="svg" viewBox="0 0 512 512">
+                <path d="M410.3 231l11.3-11.3-33.9-33.9-62.1-62.1L291.7 89.8l-11.3 11.3-22.6 22.6L58.6 322.9c-10.4 10.4-18 23.3-22.2 37.4L1 480.7c-2.5 8.4-.2 17.5 6.1 23.7s15.3 8.5 23.7 6.1l120.3-35.4c14.1-4.2 27-11.8 37.4-22.2L387.7 253.7 410.3 231zM160 399.4l-9.1 22.7c-4 3.1-8.5 5.4-13.3 6.9L59.4 452l23-78.1c1.4-4.9 3.8-9.4 6.9-13.3l22.7-9.1v32c0 8.8 7.2 16 16 16h32zM362.7 18.7L348.3 33.2 325.7 55.8 314.3 67.1l33.9 33.9 62.1 62.1 33.9 33.9 11.3-11.3 22.6-22.6 14.5-14.5c25-25 25-65.5 0-90.5L453.3 18.7c-25-25-65.5-25-90.5 0zm-47.4 168l-144 144c-6.2 6.2-16.4 6.2-22.6 0s-6.2-16.4 0-22.6l144-144c6.2-6.2 16.4-6.2 22.6 0s6.2 16.4 0 22.6z"></path></svg>
+            </button>
+            </div>
+        </div>
+    </div>
+   
+         <div class="password-change">
+            <div class="login-box" id="login-box">
+             
+              <form id="passwordChangeForm">
+                <span class="close" id="close" onclick="close11111()">&times;</span>
+                <div class="user-box">
+                    <input type="text" name="username" required>
+                    <label>Username</label>
+                </div>
+                <div class="user-box">
+                    <input type="password" name="currentPassword" required>
+                    <label>Current Password</label>
+                </div>
+                <div class="user-box">
+                    <input type="password" name="newPassword" id="newPassword" required>
+                    <label>New Password</label>
+                </div>
+                <div class="user-box">
+                    <input type="password" name="retypeNewPassword" id="retypeNewPassword" required oninput="checkPasswords()">
+                    <label>Re-Type New Password</label>
+                    <span id="passwordMatchMsg" style="color: red;"></span>
+                </div>
+                <center>
+                  <button type="submit" id="btn">SAVE</button>
+              </center>
+          
+                </form>
+              </div>
+        </div>
+  </div>
+    
+  
+    </section>
+     
+  
+   <script>
+
+      const allSideMenu = document.querySelectorAll('#sidebar .side-menu.top li a');
+  
+      allSideMenu.forEach(item=> {
+          const li = item.parentElement;
+      
+          item.addEventListener('click', function () {
+              allSideMenu.forEach(i=> {
+                  i.parentElement.classList.remove('active');
+              })
+              li.classList.add('active');
+          })
+      });
+      
+
+      function toggleDelay() {
+  setTimeout(toggle, 0); // 2000 milliseconds = 2 seconds
+}
+      
+      
+      
+      // TOGGLE SIDEBAR
+      const menuBar = document.querySelector('#content nav .bx.bx-menu');
+      const sidebar = document.getElementById('sidebar');
+      
+      menuBar.addEventListener('click', function () {
+          sidebar.classList.toggle('hide');
+      })
+      
+      
+      
+      
+      
+      
+      
+      const searchButton = document.querySelector('#content nav form .form-input button');
+      const searchButtonIcon = document.querySelector('#content nav form .form-input button .bx');
+      const searchForm = document.querySelector('#content nav form');
+      
+      searchButton.addEventListener('click', function (e) {
+          if(window.innerWidth) {
+              e.preventDefault();
+              searchForm.classList.toggle('show');
+              if(searchForm.classList.contains('show')) {
+                  searchButtonIcon.classList.replace('bx-search', 'bx-x');
+              } else {
+                  searchButtonIcon.classList.replace('bx-x', 'bx-search');
+              }
+          }
+      })
+      
+      
+      
+      
+      
+      if(window.innerWidth ) {
+          sidebar.classList.add('hide');
+      } else if(window.innerWidth > 576) {
+          searchButtonIcon.classList.replace('bx-x', 'bx-search');
+          searchForm.classList.remove('show');
+      }
+      
+      
+      window.addEventListener('resize', function () {
+          if(this.innerWidth > 576) {
+              searchButtonIcon.classList.replace('bx-x', 'bx-search');
+              searchForm.classList.remove('show');
+          }
+      })
+      
+      
+    
+    /*form srcipt*/
+      function checkPasswords() {
+    var newPassword = document.getElementById("newPassword").value;
+    var retypeNewPassword = document.getElementById("retypeNewPassword").value;
+    var passwordMatchMsg = document.getElementById("passwordMatchMsg");
+
+    if (newPassword !== retypeNewPassword) {
+        passwordMatchMsg.textContent = "Passwords do not match!";
+    } else {
+        passwordMatchMsg.textContent = "";
+    }
+}
+
+document.getElementById("passwordChangeForm").addEventListener("submit", function(event) {
+    var newPassword = document.getElementById("newPassword").value;
+    var retypeNewPassword = document.getElementById("retypeNewPassword").value;
+    var passwordMatchMsg = document.getElementById("passwordMatchMsg");
+
+    if (newPassword !== retypeNewPassword) {
+        passwordMatchMsg.textContent = "Passwords do not match!";
+        event.preventDefault();
+    }
+});
+
+
+    
+function toggleform(){
+        
+        var loginbox=document.getElementById('login-box');
+        loginbox.classList.toggle('active');
+}
+function close11111() {
+  var loginbox = document.getElementById('login-box');
+  loginbox.classList.remove('active');
+}
+
+/*eye option*/
+let passwordVisible = false;
+const passwordField = document.getElementById("current-password");
+const hiddenPassword = document.getElementById("hidden-password");
+const icon = document.querySelector(".toggle-password");
+
+// Set initial password asterisks
+passwordField.textContent = "*".repeat(hiddenPassword.textContent.length);
+
+function togglePasswordVisibility() {
+    if (passwordVisible) {
+        passwordField.textContent = "*".repeat(hiddenPassword.textContent.length);
+        icon.classList.remove("fa-eye");
+        icon.classList.add("fa-eye-slash");
+        passwordVisible = false;
+    } else {
+        passwordField.textContent = hiddenPassword.textContent;
+        icon.classList.remove("fa-eye-slash");
+        icon.classList.add("fa-eye");
+        passwordVisible = true;
+    }
+}
+
+
+ </script>
+ 
+
+
+
+ 
+</body>
+</html>
